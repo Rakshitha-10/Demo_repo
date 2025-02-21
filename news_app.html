@@ -10,37 +10,51 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            color: #333;
         }
         header {
-            background: #222;
+            background: linear-gradient(to right, #ff512f, #dd2476);
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .news-section {
             background: white;
-            padding: 15px;
+            padding: 20px;
             margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+        .news-section img {
+            width: 100%;
             border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
         }
         h2 {
             color: #222;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 3px solid #ff512f;
             padding-bottom: 5px;
+            font-size: 22px;
         }
         p {
-            color: #444;
+            font-size: 16px;
+            line-height: 1.5;
         }
         footer {
             background: #222;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             margin-top: 20px;
         }
     </style>
@@ -49,32 +63,36 @@
 
 <header>
     <h1>News Today</h1>
-    <p>Latest Updates & Headlines</p>
+    <p>Your Daily Dose of Updates & Headlines</p>
 </header>
 
 <div class="container">
     <div class="news-section">
+        <img src="https://source.unsplash.com/400x200/?world,meeting" alt="Global Summit">
         <h2>Top Story</h2>
         <p><strong>Headline:</strong> Global Summit Brings Leaders Together</p>
-        <p><strong>Description:</strong> World leaders have gathered at the International Peace Summit to discuss global challenges, including climate change, economic stability, and international security. The summit aims to strengthen diplomatic ties and develop sustainable solutions.</p>
+        <p><strong>Description:</strong> World leaders have gathered at the International Peace Summit to discuss global challenges, including climate change, economic stability, and international security.</p>
     </div>
 
     <div class="news-section">
+        <img src="https://source.unsplash.com/400x200/?sports,stadium" alt="Sports Match">
         <h2>Sports</h2>
         <p><strong>Headline:</strong> Team A Clinches Victory in Thrilling Final</p>
-        <p><strong>Description:</strong> In an intense championship match, Team A secured a dramatic victory against their rivals, Team B, with a last-minute goal. The match was filled with excitement, drawing millions of viewers worldwide.</p>
+        <p><strong>Description:</strong> In an intense championship match, Team A secured a dramatic victory against their rivals, Team B, with a last-minute goal.</p>
     </div>
 
     <div class="news-section">
+        <img src="https://source.unsplash.com/400x200/?technology,ai" alt="AI Assistant">
         <h2>Technology</h2>
         <p><strong>Headline:</strong> Tech Giant Unveils Revolutionary AI Assistant</p>
-        <p><strong>Description:</strong> A leading technology company has announced the launch of a next-generation AI assistant designed to improve productivity and enhance user experience. The new AI is expected to change the way people interact with technology.</p>
+        <p><strong>Description:</strong> A leading technology company has announced the launch of a next-generation AI assistant designed to improve productivity.</p>
     </div>
 
     <div class="news-section">
+        <img src="https://source.unsplash.com/400x200/?cinema,movie" alt="Movie Release">
         <h2>Entertainment</h2>
         <p><strong>Headline:</strong> Blockbuster Movie Breaks Box Office Records</p>
-        <p><strong>Description:</strong> The latest action-packed film has shattered box office records, earning over $500 million in its opening weekend. Fans and critics alike have praised its stunning visuals and engaging storyline.</p>
+        <p><strong>Description:</strong> The latest action-packed film has shattered box office records, earning over $500 million in its opening weekend.</p>
     </div>
 
     <div class="news-section">
