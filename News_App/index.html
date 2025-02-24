@@ -65,6 +65,9 @@
         input[type="radio"]:checked + .news-content {
             display: block;
         }
+        
+        
+        
         footer {
             background: #1a1a2e;
             color: white;
@@ -140,24 +143,23 @@ nav ul li a:hover {
     display: block;
 }
 
-.contact-section {
-    background: #1a1a2e;
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #1a1a2e;
     color: white;
-    text-align: center;
-    padding: 40px;
-    margin-top: 30px;
-    border-radius: 10px;
-}
-
-.contact-section a {
-    color: #ff512f;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.read-more:hover {
+    background-color: #ff512f;
+}
+.hidden {
+    display: none;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
-}
 
     </style>
 </head>
@@ -185,7 +187,7 @@ nav ul li a:hover {
                 <li><a href="#">World News</a></li>
             </ul>
         </li>
-        <li><a href="#">Contact</a></li>
+    
     </ul>
 </nav>
 
@@ -290,11 +292,7 @@ nav ul li a:hover {
     </div>
 </div>
 <div class="contact-section">
-    <h2>Contact Us</h2>
-    <p><b> Address:</b> 123 News Tower, Media City, India</p>
-    <p><b> Phone:</b> +91 9876543210</p>
-    <p><b> Email:</b> <a href="mailto:contact@newstoday.com">contact@newstoday.com</a></p>
-    <p><b> Business Hours:</b> Mon-Sat, 9 AM - 7 PM</p>
+    <a href="enquire.html" id="read-more" class="read-more">Read More / Enquire</a>
 </div>
 
 <footer>
