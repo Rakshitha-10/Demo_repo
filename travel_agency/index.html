@@ -106,6 +106,14 @@
             background-color: #ff5733;
             color: white;
         }
+        #greeting {
+                font-size: 22px;
+                font-weight: bold;
+                color: #ffcc00;  /* Bright yellow for visibility */
+                margin-top: 10px;
+        }
+            
+        
     </style>
     
     
@@ -113,11 +121,19 @@
     
 </head>
 <body>
+  
+        
+   
 
-<header>
-    <h1>Explore World - Travel Agency</h1>
-    <p>Your gateway to unforgettable journeys</p>
-</header>
+
+    <header>
+        <h1>Explore World - Travel Agency</h1>
+        <p>Your gateway to unforgettable journeys</p>
+        <p id="greeting"></p> <!-- Greeting will be displayed here -->
+    </header>
+    
+  
+
 
 <div class="container">
     <div class="section">
@@ -225,6 +241,14 @@
 <footer>
     <p>&copy; 2025 Explore World Travel Agency. All rights reserved.</p>
 </footer>
+<script>
+    let hours = new Date().getHours();
+    let greetingText = (hours < 12) ? "Good Morning, Traveler!" :
+                       (hours < 18) ? "Good Afternoon, Adventurer!" :
+                                      "Good Evening, Explorer!";
+
+    document.getElementById("greeting").innerText = greetingText;
+</script>
 
 </body>
 </html>

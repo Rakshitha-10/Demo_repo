@@ -178,13 +178,14 @@ nav ul li a:hover {
         <li><a href="#">Finance</a></li>
         <li><a href="#">Economy</a></li>
         <li class="dropdown">
-            <a href="#">More ▼</a>
+            <a href="#">More</a>
             <ul class="dropdown-menu">
                 <li><a href="#">Technology</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Health</a></li>
                 <li><a href="#">Entertainment</a></li>
                 <li><a href="#">World News</a></li>
+                <li><a href="#">Aviation</a></li>
             </ul>
         </li>
     
@@ -298,6 +299,21 @@ nav ul li a:hover {
 <footer>
     <p>&copy; 2025 News Today. All rights reserved.</p>
 </footer>
+<script>
+
+
+document.querySelectorAll('.dropdown').forEach(menu => {
+    let dropdownMenu = menu.querySelector('.dropdown-menu');
+    menu.querySelector('a').onclick = () => dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+document.querySelectorAll("nav ul li a").forEach(a => 
+    a.onclick = e => (e.preventDefault(), 
+        document.querySelectorAll(".news-section").forEach(s => 
+            s.style.display = s.querySelector(".news-meta").textContent.includes(a.textContent.trim()) || a.textContent.trim() === "Home" ? "block" : "none"))
+);
+
+</script>
+
 
 </body>
 </html>
