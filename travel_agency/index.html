@@ -241,53 +241,13 @@
 <footer>
     <p>&copy; 2025 Explore World Travel Agency. All rights reserved.</p>
 </footer>
-
 <script>
     let hours = new Date().getHours();
-    let greetingText;
-    
-    if (hours < 12) {
-        greetingText = "Good Morning, Traveler!";
-    } else if (hours < 18) {
-        greetingText = "Good Afternoon, Adventurer!";
-    } else {
-        greetingText = "Good Evening, Explorer!";
-    }
-    
+    let greetingText = (hours < 12) ? "Good Morning, Traveler!" :
+                       (hours < 18) ? "Good Afternoon, Adventurer!" :
+                                      "Good Evening, Explorer!";
+
     document.getElementById("greeting").innerText = greetingText;
-    
-    document.querySelectorAll("input[name='services']").forEach(service => {
-    service.addEventListener("change", function () {
-        document.querySelectorAll(".details-container").forEach(container => {
-            container.style.display = "none"; // Hide all service details
-        });
-        this.nextElementSibling.style.display = "block"; // Show selected service details
-    });
-});
-
-   
-const offers = [
-    "Get 10% off on Domestic Flights!",
-    "Book 2 Nights, Get 1 Free in Luxury Resorts!",
-    "Limited-time Cruise Discounts!",
-    "Early Bird Discount on 2025 Summer Tours!"
-];
-
-const offerSection = document.createElement("div");
-offerSection.classList.add("section");
-offerSection.innerHTML = "<h2>Special Offers</h2>";
-
-let offerList = document.createElement("ul");
-offers.forEach(offer => {
-    let li = document.createElement("li");
-    li.textContent = offer;
-    offerList.appendChild(li);
-});
-
-offerSection.appendChild(offerList);
-document.querySelector(".container").appendChild(offerSection);
-
-
 </script>
 
 </body>
