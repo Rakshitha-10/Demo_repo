@@ -125,3 +125,7 @@ footer {
     margin-top: 20px;
     border-radius: 0 0 10px 10px;
 }
+.dark-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
