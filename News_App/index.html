@@ -302,23 +302,16 @@ nav ul li a:hover {
 <script>
 
 
-document.querySelectorAll('.dropdown').forEach(menu => {
-    let dropdownMenu = menu.querySelector('.dropdown-menu');
-    menu.querySelector('a').onclick = () => dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-});
+
 document.querySelectorAll("nav ul li a").forEach(a => {
     a.onclick = e => {
         e.preventDefault();
-        
-        document.querySelectorAll(".news-section").forEach(s => {
-            let category = a.textContent.trim();
-            let newsMeta = s.querySelector(".news-meta").textContent;
+        let category = a.textContent.trim(); // Get selected category
 
-            if (category === "Home" || newsMeta.includes(category)) {
-                s.style.display = "block";
-            } else {
-                s.style.display = "none";
-            }
+        document.querySelectorAll(".news-section").forEach(s => {
+            s.style.display = (category === "Home" || s.querySelector(".news-meta").textContent.includes(category)) 
+                ? "block" 
+                : "none";
         });
     };
 });
